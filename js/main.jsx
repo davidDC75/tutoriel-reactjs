@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 class Square extends React.Component {
     render() {
       return (
-        <button className="square">
+        <button className="square" onClick={ function() {alert('clic'); } }>
           { this.props.value }
         </button>
       );
