@@ -2,3 +2,9 @@ body, header, main, aside, footer {
     margin: 0;
     padding: 0;
 }
+
+.changeMode {
+    text-decoration: none;
+    background-color: #000;
+    color: #FFF;
+}

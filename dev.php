@@ -8,7 +8,7 @@
     <title>Premier pas avec react et webpack</title>
 </head>
 <body>
-    <a href="dev.php" class="changeMode">DEV</a>
+<a href="index.html" class="changeMode">PROD</a>
     <script src="dist/prod/main.js"></script>
 </body>
 </html>
