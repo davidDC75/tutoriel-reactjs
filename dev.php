@@ -1,14 +1,22 @@
+<?php
+function asset($asset_name)
+{
+    $manifest = file_get_contents("./dist/dev/manifest.json");
+    $manifest = json_decode($manifest, true); //decode json string to php associative array
+    if (!isset($manifest[$asset_name])) return $asset_name; //if manifest.json doesn't contain $asset_name then return $asset_name itself
+    return "./dist/dev/" . $manifest[$asset_name];
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/prod/main.css" type="text">
     <title>Premier pas avec react et webpack</title>
 </head>
 <body>
 <a href="index.html" class="changeMode">PROD</a>
-    <script src="dist/prod/main.js"></script>
+    <script src="<?php echo asset("main.js"); ?>"></script>
 </body>
 </html>

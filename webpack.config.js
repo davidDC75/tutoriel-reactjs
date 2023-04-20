@@ -113,7 +113,6 @@ let config = {
     mode: dev?'development':'production', // Choisir le mode : development ou production
     entry: {
         main: ['./js/main.jsx', './css/main.css'],
-        // main_css: './css/main.css'
     }, // L'entry
     output: {
         path: path.resolve(__dirname, dev?'dist/dev':'dist/prod'),
