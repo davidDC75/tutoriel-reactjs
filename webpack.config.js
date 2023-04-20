@@ -159,7 +159,7 @@ if (!dev) {
     // Crée le fichier manifest.json
     config.plugins.push(new WebpackManifestPlugin({
         basePath: '',
-        publicPath: '',
+        publicPath: 'dist/dev/',
     }));
 
     // Active le watch

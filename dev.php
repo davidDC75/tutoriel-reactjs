@@ -4,7 +4,7 @@ function asset($asset_name)
     $manifest = file_get_contents("./dist/dev/manifest.json");
     $manifest = json_decode($manifest, true); //decode json string to php associative array
     if (!isset($manifest[$asset_name])) return $asset_name; //if manifest.json doesn't contain $asset_name then return $asset_name itself
-    return "./dist/dev/" . $manifest[$asset_name];
+    return $manifest[$asset_name];
 }
 ?>
 <!DOCTYPE html>
