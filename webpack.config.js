@@ -42,21 +42,21 @@ let module_rule = {
             test: /\.js|jsx$/,
             exclude: /(node_modules|bower_components)/,
             use: [
-            { // Ajout de babel-loader
-                loader: 'babel-loader',
-                options: {
-                    presets: [
-                        // utilise le fichier .browserslistrc
-                        '@babel/preset-env',
-                        [
-                            "@babel/preset-react", {
-                                "runtime": "automatic"
-                            }
+                { // Ajout de babel-loader
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            // utilise le fichier .browserslistrc
+                            '@babel/preset-env',
+                            [
+                                "@babel/preset-react", {
+                                    "runtime": "automatic"
+                                }
+                            ]
                         ]
-                    ]
-                },
-
-            }],
+                    },
+                }
+            ],
         },
         // Pour compiler et injecter du css
         {
