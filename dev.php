@@ -16,7 +16,9 @@ function asset($asset_name)
     <title>Premier pas avec react et webpack</title>
 </head>
 <body>
-<a href="index.html" class="changeMode">PROD</a>
+    <!-- https://jsramblings.com/creating-a-react-app-with-webpack/ -->
+    <div id="root"></div>
+    <a href="index.html" class="changeMode">PROD</a>
     <script src="<?php echo asset("main.js"); ?>"></script>
 </body>
 </html>
