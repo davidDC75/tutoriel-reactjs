@@ -142,11 +142,6 @@ if (!dev) {
     config.plugins.push(new MiniCssExtractPlugin({
         filename: '[name].css',
     }));
-    // Clean le répertoire
-    config.plugins.push(new CleanWebpackPlugin({
-        verbose: true,
-        dry: false,
-    }));
 
     // Lance une optimisation des fichiers (minimification)
     optimization= {
