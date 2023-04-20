@@ -123,6 +123,10 @@ let config = {
     plugins: [
         // plugins commun au deux modes
         new SimpleProgressWebpackPlugin(),
+        new CleanWebpackPlugin({
+            dry: false,
+            verbose: true,
+        }),
     ],
 
     // devtool uniquement en dev
