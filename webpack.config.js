@@ -111,11 +111,14 @@ let module_rule = {
 
 let config = {
     mode: dev?'development':'production', // Choisir le mode : development ou production
-    entry: './js/main.js', // L'entry
+    entry: {
+        main: ['./js/main.js', './css/main.css'],
+        // main_css: './css/main.css'
+    }, // L'entry
     output: {
         path: path.resolve(__dirname, dev?'dist/dev':'dist/prod'),
         // Hash en dev et main en prod
-        filename: dev?'[name]-[chunkhash].js':'[name].js',
+        filename: dev?'main-[chunkhash].js':'[name].js',
     },
 
     plugins: [
