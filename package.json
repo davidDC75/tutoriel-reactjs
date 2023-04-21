@@ -15,6 +15,7 @@
     "mini-css-extract-plugin": "^2.7.5",
     "postcss-loader": "^7.2.4",
     "react": "^18.2.0",
+    "react-devtools": "^4.27.6",
     "react-dom": "^18.2.0",
     "sass-loader": "^13.2.2",
     "simple-progress-webpack-plugin": "^2.0.0",
